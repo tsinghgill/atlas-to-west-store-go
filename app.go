@@ -62,10 +62,10 @@ func (f FilterStore) Process(stream []turbine.Record) []turbine.Record {
 		log.Printf("Processing record %d: %+v\n", i, record) // Logging the record details
 		log.Printf("Payload: \n%s\n", record.Payload)        // Logging the payload
 
-		log.Printf("Setting StoreID")
+		log.Printf("getting StoreID")
 		storeId := record.Payload.Get("storeId")
-		if storeId != nil {
-			log.Println("error setting value: ", storeId)
+		if storeId == nil {
+			log.Println("error getting value: ", storeId)
 			continue
 		}
 		if storeId == "001" {
