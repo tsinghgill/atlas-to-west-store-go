@@ -42,7 +42,7 @@ func (a App) Run(v turbine.Turbine) error {
 		return err
 	}
 
-	err = dest.WriteWithConfig(res, "medicine_from_atlas", turbine.ConnectionOptions{
+	err = dest.WriteWithConfig(res, "medicine", turbine.ConnectionOptions{
 		{Field: "max.batch.size", Value: "1"},
 	})
 	if err != nil {
