@@ -54,21 +54,53 @@ func (a App) Run(v turbine.Turbine) error {
 
 type FilterStore struct{}
 
+// func (f FilterStore) Process(stream []turbine.Record) []turbine.Record {
+// 	processedStream := make([]turbine.Record, 0)
+// 	for i, record := range stream {
+// 		// log.Printf("Processing record %d: %+v\n", i, record) // Logging the record details
+// 		log.Printf("Payload: \n%s\n", record.Payload) // Logging the payload
+
+// 		log.Printf("getting StoreID")
+// 		storeId := record.Payload.Get("storeId")
+// 		if storeId == nil {
+// 			log.Println("error getting value: ", storeId)
+// 			continue
+// 		}
+// 		if storeId == "001" {
+// 			processedStream = append(processedStream, stream[i])
+// 		}
+// 	}
+// 	return processedStream
+// }
+
 func (f FilterStore) Process(stream []turbine.Record) []turbine.Record {
-	rr := make([]turbine.Record, 0)
-	for i, record := range stream {
+	processedStream := make([]turbine.Record, 0)
+
+	for _, record := range stream {
 		// log.Printf("Processing record %d: %+v\n", i, record) // Logging the record details
 		log.Printf("Payload: \n%s\n", record.Payload) // Logging the payload
 
-		log.Printf("getting StoreID")
-		storeId := record.Payload.Get("storeId")
-		if storeId == nil {
-			log.Println("error getting value: ", storeId)
+		source := record.Payload.Get("source")
+		if source == nil {
+			log.Printf("Error getting source: %v", source)
 			continue
 		}
-		if storeId == "001" {
-			rr = append(rr, stream[i])
+
+		if source == "atlas" {
+			log.Printf("Getting storeId")
+			storeId := record.Payload.Get("storeId")
+			if storeId == nil {
+				log.Println("error getting value: ", storeId)
+				continue
+			}
+
+			if storeId == "001" {
+				log.Printf("Adding record with storeId 001")
+				processedStream = append(processedStream, record)
+			}
+		} else {
+			log.Printf("Dropping record with source: %s", source)
 		}
 	}
-	return rr
+	return processedStream
 }
