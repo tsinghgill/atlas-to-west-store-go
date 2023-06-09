@@ -1,8 +1,6 @@
 package main
 
 import (
-	// Dependencies of the example data app
-
 	"context"
 	"log"
 
@@ -26,7 +24,7 @@ func (a App) Run(v turbine.Turbine) error {
 		return err
 	}
 
-	rr, err := source.RecordsWithContext(context.Background(), "medicinefromweststorego", turbine.ConnectionOptions{
+	rr, err := source.RecordsWithContext(context.Background(), "aggregated_medicine", turbine.ConnectionOptions{
 		{Field: "transforms", Value: "unwrap"},
 		{Field: "transforms.unwrap.type", Value: "io.debezium.connector.mongodb.transforms.ExtractNewDocumentState"},
 	})
