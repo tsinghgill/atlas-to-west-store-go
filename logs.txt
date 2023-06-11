@@ -1,0 +1,292 @@
+
+# Logs for destination west-store-mongo resource
+
+[2023-06-11T02:24:38Z] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = connector-22997
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+[2023-06-11T02:24:38Z] Creating connector connector-22997 of type com.mongodb.kafka.connect.MongoSinkConnector[2023-06-11T02:24:38Z] Instantiated connector connector-22997 with version 1.4.0-dirty of type class com.mongodb.kafka.connect.MongoSinkConnector[2023-06-11T02:24:38Z] Finished creating connector connector-22997[2023-06-11T02:24:40Z] Creating task connector-22997-0[2023-06-11T02:24:40Z] ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = connector-22997
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+[2023-06-11T02:24:40Z] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = connector-22997
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+[2023-06-11T02:24:40Z] TaskConfig values: 
+	task.class = class com.mongodb.kafka.connect.sink.MongoSinkTask
+[2023-06-11T02:24:40Z] Instantiated task connector-22997-0 with version 1.4.0-dirty of type com.mongodb.kafka.connect.sink.MongoSinkTask[2023-06-11T02:24:40Z] JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+[2023-06-11T02:24:40Z] Set up the key converter class org.apache.kafka.connect.json.JsonConverter for task connector-22997-0 using the worker config[2023-06-11T02:24:40Z] JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+[2023-06-11T02:24:40Z] Set up the value converter class org.apache.kafka.connect.json.JsonConverter for task connector-22997-0 using the worker config[2023-06-11T02:24:40Z] Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task connector-22997-0 using the worker config[2023-06-11T02:24:40Z] Initializing: org.apache.kafka.connect.runtime.TransformationChain{}[2023-06-11T02:24:40Z] SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = connector-22997
+	tasks.max = 1
+	topics = [resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+[2023-06-11T02:24:40Z] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = connector-22997
+	tasks.max = 1
+	topics = [resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+[2023-06-11T02:24:40Z] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [b-6.meroxa-msk-4df588e5-32.taybze.c6.kafka.us-east-1.amazonaws.com:9094, b-2.meroxa-msk-4df588e5-32.taybze.c6.kafka.us-east-1.amazonaws.com:9094, b-3.meroxa-msk-4df588e5-32.taybze.c6.kafka.us-east-1.amazonaws.com:9094]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = connector-consumer-connector-22997-0
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-connector-22997
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+[2023-06-11T02:24:40Z] Kafka version: 2.5.0[2023-06-11T02:24:40Z] Kafka commitId: 66563e712b0b9f84[2023-06-11T02:24:40Z] Kafka startTimeMs: 1686450280258[2023-06-11T02:24:40Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Subscribed to topic(s): resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275[2023-06-11T02:24:40Z] Starting MongoDB sink task[2023-06-11T02:24:40Z] MongoSinkTopicConfig values: 
+	change.data.capture.handler = 
+	collection = medicine
+	database = dispensedPills
+	delete.on.null.values = false
+	document.id.strategy = com.mongodb.kafka.connect.sink.processor.id.strategy.BsonOidStrategy
+	document.id.strategy.overwrite.existing = false
+	document.id.strategy.partial.key.projection.list = 
+	document.id.strategy.partial.key.projection.type = 
+	document.id.strategy.partial.value.projection.list = 
+	document.id.strategy.partial.value.projection.type = 
+	document.id.strategy.uuid.format = string
+	errors.log.enable = false
+	errors.tolerance = none
+	field.renamer.mapping = []
+	field.renamer.regexp = []
+	key.projection.list = 
+	key.projection.type = none
+	max.batch.size = 1
+	max.num.retries = 1
+	namespace.mapper = com.mongodb.kafka.connect.sink.namespace.mapping.DefaultNamespaceMapper
+	namespace.mapper.error.if.invalid = false
+	namespace.mapper.key.collection.field = 
+	namespace.mapper.key.database.field = 
+	namespace.mapper.value.collection.field = 
+	namespace.mapper.value.database.field = 
+	post.processor.chain = [com.mongodb.kafka.connect.sink.processor.DocumentIdAdder]
+	rate.limiting.every.n = 0
+	rate.limiting.timeout = 0
+	retries.defer.timeout = 5000
+	topic = resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275
+	value.projection.list = 
+	value.projection.type = none
+	writemodel.strategy = com.mongodb.kafka.connect.sink.writemodel.strategy.ReplaceOneDefaultStrategy
+[2023-06-11T02:24:40Z] WorkerSinkTask{id=connector-22997-0} Sink task finished initialization and start[2023-06-11T02:24:40Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Error while fetching metadata with correlation id 2 : {resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275=LEADER_NOT_AVAILABLE}[2023-06-11T02:24:40Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Cluster ID: NjCOcI61RVOPj8DvGjs5lg[2023-06-11T02:24:40Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Discovered group coordinator b-3.meroxa-msk-4df588e5-32.taybze.c6.kafka.us-east-1.amazonaws.com:9094 (id: 2147483644 rack: null)[2023-06-11T02:24:40Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] (Re-)joining group[2023-06-11T02:24:40Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Join group failed with org.apache.kafka.common.errors.MemberIdRequiredException: The group member needs to have a valid member id before actually entering a consumer group[2023-06-11T02:24:40Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] (Re-)joining group[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Finished assignment for group at generation 1: {connector-consumer-connector-22997-0-17504df7-1a87-4d01-b454-9730c3eead3e=Assignment(partitions=[resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-0, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-1, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-2, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-3, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-4, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-5, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-6, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-7])}[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Successfully joined group with generation 1[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Adding newly assigned partitions: resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-4, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-5, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-6, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-7, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-0, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-1, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-2, resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-3[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Found no committed offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-4[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Found no committed offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-5[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Found no committed offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-6[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Found no committed offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-7[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Found no committed offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-0[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Found no committed offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-1[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Found no committed offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-2[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Found no committed offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-3[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Resetting offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-2 to offset 0.[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Resetting offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-5 to offset 0.[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Resetting offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-6 to offset 0.[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Resetting offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-0 to offset 0.[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Resetting offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-3 to offset 0.[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Resetting offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-7 to offset 0.[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Resetting offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-1 to offset 0.[2023-06-11T02:24:43Z] [Consumer clientId=connector-consumer-connector-22997-0, groupId=connect-connector-22997] Resetting offset for partition resource-23530-845025.pharmacies.aggregated_medicine-666f418d-634d-4102-a065-1aa720866275-4 to offset 0.
+
+# Logs for source meroxa-atlas resource
+
+[2023-06-11T02:29:14Z] Subdividing 1 MongoDB replica set(s) into at most 1 task(s)[2023-06-11T02:29:14Z] Configuring MongoDB connector task 0 to capture events for replica set(s) at atlas-1l0a7p-shard-0/ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017[2023-06-11T02:29:29Z] WorkerSourceTask{id=connector-22996-0} Committing offsets[2023-06-11T02:29:29Z] WorkerSourceTask{id=connector-22996-0} flushing 0 outstanding messages for offset commit[2023-06-11T02:29:29Z] WorkerSourceTask{id=connector-22996-0} Finished commitOffsets successfully in 8 ms[2023-06-11T02:29:44Z] Checking current members of replica set at ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:14Z] Checking current members of replica set at ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:29Z] WorkerSourceTask{id=connector-22996-0} Committing offsets[2023-06-11T02:30:29Z] WorkerSourceTask{id=connector-22996-0} flushing 0 outstanding messages for offset commit[2023-06-11T02:30:44Z] Checking current members of replica set at ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:44Z] Stopping connector connector-22996[2023-06-11T02:30:44Z] Stopping MongoDB connector[2023-06-11T02:30:44Z] Closing all connections to ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:44Z] Closed connection [connectionId{localValue:73, serverValue:340436}] to ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017 because the pool has been closed.[2023-06-11T02:30:44Z] Stopped MongoDB connector[2023-06-11T02:30:44Z] Stopped connector connector-22996[2023-06-11T02:30:44Z] ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mongodb.MongoDbConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = connector-22996
+	tasks.max = 1
+	transforms = [unwrap]
+	value.converter = null
+[2023-06-11T02:30:44Z] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mongodb.MongoDbConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = connector-22996
+	tasks.max = 1
+	transforms = [unwrap]
+	transforms.unwrap.array.encoding = array
+	transforms.unwrap.flatten.struct = false
+	transforms.unwrap.flatten.struct.delimiter = _
+	transforms.unwrap.sanitize.field.names = false
+	transforms.unwrap.type = class io.debezium.connector.mongodb.transforms.ExtractNewDocumentState
+	value.converter = null
+[2023-06-11T02:30:44Z] Creating connector connector-22996 of type io.debezium.connector.mongodb.MongoDbConnector[2023-06-11T02:30:44Z] Instantiated connector connector-22996 with version 1.2.5.Final of type class io.debezium.connector.mongodb.MongoDbConnector[2023-06-11T02:30:44Z] Starting MongoDB connector and discovering replica set(s) at ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:44Z] Requested thread factory for connector MongoDbConnector, id = resource-23530-845025 named = replica-set-monitor[2023-06-11T02:30:44Z] Creating thread debezium-mongodbconnector-resource-23530-845025-replica-set-monitor[2023-06-11T02:30:44Z] Successfully started MongoDB connector, and continuing to discover changes in replica set(s) at ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:44Z] Cluster created with settings {hosts=[ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017, ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017, ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}[2023-06-11T02:30:44Z] Adding discovered server ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017 to client view of cluster[2023-06-11T02:30:44Z] Finished creating connector connector-22996[2023-06-11T02:30:44Z] Adding discovered server ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017 to client view of cluster[2023-06-11T02:30:44Z] Adding discovered server ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017 to client view of cluster[2023-06-11T02:30:44Z] Cluster description not yet available. Waiting for 30000 ms before timing out[2023-06-11T02:30:44Z] Opened connection [connectionId{localValue:75, serverValue:336250}] to ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:44Z] Opened connection [connectionId{localValue:76, serverValue:334355}] to ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:44Z] Opened connection [connectionId{localValue:74, serverValue:340463}] to ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:44Z] Monitor thread successfully connected to server with description ServerDescription{address=ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 6]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=62440513, setName='atlas-1l0a7p-shard-0', canonicalAddress=ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017, hosts=[ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017, ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017, ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017], passives=[], arbiters=[], primary='ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_WEST_2'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, lastWriteDate=Sun Jun 11 02:30:44 UTC 2023, lastUpdateTimeNanos=1297570650360}[2023-06-11T02:30:44Z] Discovered cluster type of REPLICA_SET[2023-06-11T02:30:44Z] No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 6]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=62440513, setName='atlas-1l0a7p-shard-0', canonicalAddress=ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017, hosts=[ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017, ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017, ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017], passives=[], arbiters=[], primary='ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_WEST_2'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, lastWriteDate=Sun Jun 11 02:30:44 UTC 2023, lastUpdateTimeNanos=1297570650360}]}. Waiting for 30000 ms before timing out[2023-06-11T02:30:44Z] Monitor thread successfully connected to server with description ServerDescription{address=ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 6]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=63947033, setName='atlas-1l0a7p-shard-0', canonicalAddress=ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017, hosts=[ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017, ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017, ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017], passives=[], arbiters=[], primary='ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_WEST_2'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, lastWriteDate=Sun Jun 11 02:30:44 UTC 2023, lastUpdateTimeNanos=1297575463126}[2023-06-11T02:30:44Z] Monitor thread successfully connected to server with description ServerDescription{address=ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 6]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=63285340, setName='atlas-1l0a7p-shard-0', canonicalAddress=ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017, hosts=[ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017, ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017, ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017], passives=[], arbiters=[], primary='ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_WEST_2'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000063, setVersion=7, lastWriteDate=Sun Jun 11 02:30:44 UTC 2023, lastUpdateTimeNanos=1297578951367}[2023-06-11T02:30:44Z] Setting max election id to 7fffffff0000000000000063 from replica set primary ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:44Z] Setting max set version to 7 from replica set primary ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:44Z] Discovered replica set primary ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:44Z] Opened connection [connectionId{localValue:77, serverValue:340480}] to ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:45Z] Checking current members of replica set at ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:45Z] Subdividing 1 MongoDB replica set(s) into at most 1 task(s)[2023-06-11T02:30:45Z] Requesting task reconfiguration due to new/removed replica set(s) for MongoDB with seeds ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:45Z] New replica sets include:[2023-06-11T02:30:45Z]   atlas-1l0a7p-shard-0/ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:45Z] Configuring MongoDB connector task 0 to capture events for replica set(s) at atlas-1l0a7p-shard-0/ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017[2023-06-11T02:30:45Z] Subdividing 1 MongoDB replica set(s) into at most 1 task(s)[2023-06-11T02:30:45Z] Configuring MongoDB connector task 0 to capture events for replica set(s) at atlas-1l0a7p-shard-0/ac-g89l08h-shard-00-00.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-01.6wrjlkh.mongodb.net:27017,ac-g89l08h-shard-00-02.6wrjlkh.mongodb.net:27017
+
+# Logs for filterstore-a5ae5db3 function
+
+[2023-06-11T02:30:48Z] {"payload":{"id":"64852e370625432c71050731","pillName":"Advil","quantityDispensed":100,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:30:48Z] 2023/06/11 02:30:48 Dropping record with source: west-store-mongo
+[2023-06-11T02:30:48Z] 2023/06/11 02:30:48 Payload: 
+[2023-06-11T02:30:48Z] {"payload":{"id":"64852e360625432c7105072f","pillName":"Tylenol","quantityDispensed":500,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:30:48Z] 2023/06/11 02:30:48 Dropping record with source: west-store-mongo
+[2023-06-11T02:30:49Z] 2023/06/11 02:30:49 Payload: 
+[2023-06-11T02:30:49Z] {"payload":{"id":"64852e370625432c71050731","pillName":"Advil","quantityDispensed":100,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:30:49Z] 2023/06/11 02:30:49 Dropping record with source: west-store-mongo
+[2023-06-11T02:30:50Z] 2023/06/11 02:30:50 Payload: 
+[2023-06-11T02:30:50Z] {"payload":{"id":"64852e360625432c7105072f","pillName":"Tylenol","quantityDispensed":500,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:30:50Z] 2023/06/11 02:30:50 Dropping record with source: west-store-mongo
+[2023-06-11T02:30:51Z] 2023/06/11 02:30:51 Payload: 
+[2023-06-11T02:30:51Z] {"payload":{"id":"64852e370625432c71050731","pillName":"Advil","quantityDispensed":100,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:30:51Z] 2023/06/11 02:30:51 Dropping record with source: west-store-mongo
+[2023-06-11T02:30:52Z] 2023/06/11 02:30:52 Payload: 
+[2023-06-11T02:30:52Z] {"payload":{"id":"64852e360625432c7105072f","pillName":"Tylenol","quantityDispensed":500,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:30:52Z] 2023/06/11 02:30:52 Dropping record with source: west-store-mongo
+[2023-06-11T02:30:53Z] 2023/06/11 02:30:53 Payload: 
+[2023-06-11T02:30:53Z] {"payload":{"id":"64852e370625432c71050731","pillName":"Advil","quantityDispensed":100,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:30:53Z] 2023/06/11 02:30:53 Dropping record with source: west-store-mongo
+[2023-06-11T02:30:54Z] 2023/06/11 02:30:54 Payload: 
+[2023-06-11T02:30:54Z] {"payload":{"id":"64852e360625432c7105072f","pillName":"Tylenol","quantityDispensed":500,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:30:54Z] 2023/06/11 02:30:54 Dropping record with source: west-store-mongo
+[2023-06-11T02:30:55Z] 2023/06/11 02:30:55 Payload: 
+[2023-06-11T02:30:55Z] {"payload":{"id":"64852e370625432c71050731","pillName":"Advil","quantityDispensed":100,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:30:55Z] 2023/06/11 02:30:55 Dropping record with source: west-store-mongo
+[2023-06-11T02:30:56Z] 2023/06/11 02:30:56 Payload: 
+[2023-06-11T02:30:56Z] {"payload":{"id":"64852e360625432c7105072f","pillName":"Tylenol","quantityDispensed":500,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:30:56Z] 2023/06/11 02:30:56 Dropping record with source: west-store-mongo
+[2023-06-11T02:30:57Z] 2023/06/11 02:30:57 Payload: 
+[2023-06-11T02:30:57Z] {"payload":{"id":"64852e370625432c71050731","pillName":"Advil","quantityDispensed":100,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:30:57Z] 2023/06/11 02:30:57 Dropping record with source: west-store-mongo
+[2023-06-11T02:30:58Z] 2023/06/11 02:30:58 Payload: 
+[2023-06-11T02:30:58Z] {"payload":{"id":"64852e360625432c7105072f","pillName":"Tylenol","quantityDispensed":500,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:30:58Z] 2023/06/11 02:30:58 Dropping record with source: west-store-mongo
+[2023-06-11T02:31:00Z] 2023/06/11 02:31:00 Payload: 
+[2023-06-11T02:31:00Z] {"payload":{"id":"64852e370625432c71050731","pillName":"Advil","quantityDispensed":100,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:31:00Z] 2023/06/11 02:31:00 Dropping record with source: west-store-mongo
+[2023-06-11T02:31:01Z] 2023/06/11 02:31:01 Payload: 
+[2023-06-11T02:31:01Z] {"payload":{"id":"64852e360625432c7105072f","pillName":"Tylenol","quantityDispensed":500,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:31:01Z] 2023/06/11 02:31:01 Dropping record with source: west-store-mongo
+[2023-06-11T02:31:02Z] 2023/06/11 02:31:02 Payload: 
+[2023-06-11T02:31:02Z] {"payload":{"id":"64852e370625432c71050731","pillName":"Advil","quantityDispensed":100,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:31:02Z] 2023/06/11 02:31:02 Dropping record with source: west-store-mongo
+[2023-06-11T02:31:02Z] 2023/06/11 02:31:02 Payload: 
+[2023-06-11T02:31:02Z] {"payload":{"id":"64852e360625432c7105072f","pillName":"Tylenol","quantityDispensed":500,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:31:02Z] 2023/06/11 02:31:02 Dropping record with source: west-store-mongo
+[2023-06-11T02:31:03Z] 2023/06/11 02:31:03 Payload: 
+[2023-06-11T02:31:03Z] {"payload":{"id":"64852e370625432c71050731","pillName":"Advil","quantityDispensed":100,"source":"west-store-mongo","storeId":"001"},"schema":{"fields":[{"field":"pillName","optional":true,"type":"string"},{"field":"quantityDispensed","optional":true,"type":"int32"},{"field":"source","optional":true,"type":"string"},{"field":"id","optional":true,"type":"string"},{"field":"storeId","optional":true,"type":"string"}],"name":"resource_23530_845025.pharmacies.aggregated_medicine","optional":false,"type":"struct"}}
+[2023-06-11T02:31:03Z] 2023/06/11 02:31:03 Dropping record with source: west-store-mongo
+
