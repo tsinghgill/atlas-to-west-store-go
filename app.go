@@ -19,15 +19,16 @@ type App struct{}
 
 func (a App) Run(v turbine.Turbine) error {
 
-	source, err := v.Resources("meroxa-atlas")
+	source, err := v.Resources("atlas-mongo")
 	if err != nil {
 		return err
 	}
 
-	rr, err := source.RecordsWithContext(context.Background(), "aggregated_medicine", turbine.ConnectionOptions{
-		{Field: "transforms", Value: "unwrap"},
-		{Field: "transforms.unwrap.type", Value: "io.debezium.connector.mongodb.transforms.ExtractNewDocumentState"},
-	})
+	// rr, err := source.RecordsWithContext(context.Background(), "aggregated_medicine", turbine.ConnectionOptions{
+	// 	{Field: "transforms", Value: "unwrap"},
+	// 	{Field: "transforms.unwrap.type", Value: "io.debezium.connector.mongodb.transforms.ExtractNewDocumentState"},
+	// })
+	rr, err := source.RecordsWithContext(context.Background(), "aggregated_medicine", turbine.ConnectionOptions{})
 	if err != nil {
 		return err
 	}
@@ -44,6 +45,10 @@ func (a App) Run(v turbine.Turbine) error {
 
 	err = dest.WriteWithConfig(res, "medicine", turbine.ConnectionOptions{
 		{Field: "max.batch.size", Value: "1"},
+		{Field: "document.id.strategy", Value: "com.mongodb.kafka.connect.sink.processor.id.strategy.PartialValueStrategy"},
+		{Field: "document.id.strategy.partial.value.projection.list", Value: "after.patient_id"},
+		{Field: "document.id.strategy.partial.value.projection.type", Value: "AllowList"},
+		{Field: "writemodel.strategy", Value: "com.mongodb.kafka.connect.sink.writemodel.strategy.ReplaceOneBusinessKeyStrategy"},
 	})
 	if err != nil {
 		return err
@@ -54,25 +59,6 @@ func (a App) Run(v turbine.Turbine) error {
 
 type FilterStore struct{}
 
-// func (f FilterStore) Process(stream []turbine.Record) []turbine.Record {
-// 	processedStream := make([]turbine.Record, 0)
-// 	for i, record := range stream {
-// 		// log.Printf("Processing record %d: %+v\n", i, record) // Logging the record details
-// 		log.Printf("Payload: \n%s\n", record.Payload) // Logging the payload
-
-// 		log.Printf("getting StoreID")
-// 		storeId := record.Payload.Get("storeId")
-// 		if storeId == nil {
-// 			log.Println("error getting value: ", storeId)
-// 			continue
-// 		}
-// 		if storeId == "001" {
-// 			processedStream = append(processedStream, stream[i])
-// 		}
-// 	}
-// 	return processedStream
-// }
-
 func (f FilterStore) Process(stream []turbine.Record) []turbine.Record {
 	processedStream := make([]turbine.Record, 0)
 
@@ -81,6 +67,7 @@ func (f FilterStore) Process(stream []turbine.Record) []turbine.Record {
 		log.Printf("Payload: \n%s\n", record.Payload) // Logging the payload
 
 		source := record.Payload.Get("source")
+		log.Printf("source value: %v", source)
 		if source == nil {
 			log.Printf("Error getting source: %v", source)
 			continue
