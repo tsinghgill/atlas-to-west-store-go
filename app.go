@@ -63,8 +63,8 @@ func (f FilterStore) Process(stream []turbine.Record) []turbine.Record {
 	processedStream := make([]turbine.Record, 0)
 
 	for _, record := range stream {
-		// log.Printf("Processing record %d: %+v\n", i, record) // Logging the record details
-		log.Printf("Payload: \n%s\n", record.Payload) // Logging the payload
+		log.Printf("Processing record \n%s\n", record) // Logging the record details
+		log.Printf("Payload: \n%s\n", record.Payload)  // Logging the payload
 
 		source := record.Payload.Get("source")
 		log.Printf("source value: %v", source)
